@@ -16,8 +16,8 @@ android {
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         applicationId = "dev.mackenzie.agiplayer"
-        versionCode = 51
-        versionName = "0.15.4"
+        versionCode = 1
+        versionName = "0.2.5"
     }
 
     buildFeatures {
