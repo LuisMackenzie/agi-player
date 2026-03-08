@@ -60,7 +60,7 @@ import dev.mackenzie.agiplayer.MainActivityUiState
 import dev.mackenzie.agiplayer.MainViewModel
 import dev.mackenzie.agiplayer.core.ui.R
 import dev.mackenzie.agiplayer.core.ui.designsystem.NextIcons
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 import dev.mackenzie.agiplayer.shouldUseDarkTheme
 import dev.mackenzie.agiplayer.shouldUseDynamicTheming
 import dev.mackenzie.agiplayer.shouldUseHighContrastDarkTheme
@@ -121,7 +121,7 @@ class CrashActivity : ComponentActivity() {
                 )
             }
 
-            NextPlayerTheme(
+            AGIPlayerTheme(
                 darkTheme = shouldUseDarkTheme,
                 highContrastDarkTheme = shouldUseHighContrastDarkTheme(uiState = uiState),
                 dynamicColor = shouldUseDynamicTheming(uiState = uiState),
@@ -337,7 +337,7 @@ private fun LogsSelectionContainer(
 @PreviewLightDark
 @Composable
 private fun CrashLogsScreenPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         CrashScreen(
             exceptionString = "Exception message",
             logcat = "Logcat message",

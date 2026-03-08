@@ -28,7 +28,7 @@ import dev.mackenzie.agiplayer.core.ui.components.ListSectionTitle
 import dev.mackenzie.agiplayer.core.ui.components.NextTopAppBar
 import dev.mackenzie.agiplayer.core.ui.components.PreferenceSwitch
 import dev.mackenzie.agiplayer.core.ui.designsystem.NextIcons
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 
 @Composable
 fun MediaLibraryPreferencesScreen(
@@ -137,7 +137,7 @@ private fun MediaLibraryPreferencesContent(
 @PreviewLightDark
 @Composable
 private fun MediaLibraryPreferencesScreenPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         MediaLibraryPreferencesContent(
             uiState = MediaLibraryPreferencesUiState(),
             onNavigateUp = {},

@@ -35,7 +35,7 @@ import dev.mackenzie.agiplayer.core.common.storagePermission
 import dev.mackenzie.agiplayer.core.media.services.MediaService
 import dev.mackenzie.agiplayer.core.media.sync.MediaSynchronizer
 import dev.mackenzie.agiplayer.core.model.ThemeConfig
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 import dev.mackenzie.agiplayer.navigation.MediaRootRoute
 import dev.mackenzie.agiplayer.navigation.mediaNavGraph
 import dev.mackenzie.agiplayer.navigation.settingsNavGraph
@@ -93,7 +93,7 @@ class MainActivity : ComponentActivity() {
                 )
             }
 
-            NextPlayerTheme(
+            AGIPlayerTheme(
                 darkTheme = shouldUseDarkTheme,
                 highContrastDarkTheme = shouldUseHighContrastDarkTheme(uiState = uiState),
                 dynamicColor = shouldUseDynamicTheming(uiState = uiState),

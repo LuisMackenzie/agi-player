@@ -240,7 +240,7 @@ private val highContrastDarkColorScheme = darkColorScheme(
 )
 
 @Composable
-fun NextPlayerTheme(
+fun AGIPlayerTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     highContrastDarkTheme: Boolean = false,
     dynamicColor: Boolean = true,

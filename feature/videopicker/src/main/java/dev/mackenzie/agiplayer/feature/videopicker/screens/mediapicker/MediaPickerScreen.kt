@@ -92,7 +92,7 @@ import dev.mackenzie.agiplayer.core.ui.designsystem.NextIcons
 import dev.mackenzie.agiplayer.core.ui.extensions.copy
 import dev.mackenzie.agiplayer.core.ui.preview.DayNightPreview
 import dev.mackenzie.agiplayer.core.ui.preview.VideoPickerPreviewParameterProvider
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 import dev.mackenzie.agiplayer.feature.videopicker.composables.CenterCircularProgressBar
 import dev.mackenzie.agiplayer.feature.videopicker.composables.MediaView
 import dev.mackenzie.agiplayer.feature.videopicker.composables.NoVideosFound
@@ -674,7 +674,7 @@ private fun MediaPickerScreenPreview(
     @PreviewParameter(VideoPickerPreviewParameterProvider::class)
     videos: List<Video>,
 ) {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         MediaPickerScreen(
             uiState = MediaPickerUiState(
                 folderName = null,
@@ -714,7 +714,7 @@ private fun ButtonPreview() {
 @DayNightPreview
 @Composable
 private fun MediaPickerNoVideosFoundPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         Surface {
             MediaPickerScreen(
                 uiState = MediaPickerUiState(
@@ -730,7 +730,7 @@ private fun MediaPickerNoVideosFoundPreview() {
 @DayNightPreview
 @Composable
 private fun MediaPickerLoadingPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         Surface {
             MediaPickerScreen(
                 uiState = MediaPickerUiState(

@@ -26,7 +26,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import dev.mackenzie.agiplayer.core.ui.R
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 
 private const val NORMAL_MAX_PERCENTAGE = 100
 
@@ -103,7 +103,7 @@ fun VerticalProgressView(
 @Preview
 @Composable
 private fun VerticalProgressPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         VerticalProgressView(
             value = 50,
             icon = painterResource(R.drawable.ic_volume),
@@ -114,7 +114,7 @@ private fun VerticalProgressPreview() {
 @Preview
 @Composable
 private fun VerticalProgressBoostPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         VerticalProgressView(
             value = 150,
             maxValue = 200,

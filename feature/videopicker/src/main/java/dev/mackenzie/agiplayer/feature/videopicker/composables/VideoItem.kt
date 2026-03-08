@@ -44,7 +44,7 @@ import dev.mackenzie.agiplayer.core.model.MediaLayoutMode
 import dev.mackenzie.agiplayer.core.model.Video
 import dev.mackenzie.agiplayer.core.ui.components.NextSegmentedListItem
 import dev.mackenzie.agiplayer.core.ui.designsystem.NextIcons
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 
 @Composable
 fun VideoItem(
@@ -295,7 +295,7 @@ private fun ThumbnailView(
 @PreviewLightDark
 @Composable
 fun VideoItemRecentlyPlayedPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         Surface {
             VideoListItem(
                 video = Video.sample,
@@ -309,7 +309,7 @@ fun VideoItemRecentlyPlayedPreview() {
 @PreviewLightDark
 @Composable
 fun VideoItemPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         Surface {
             VideoListItem(
                 video = Video.sample,
@@ -323,7 +323,7 @@ fun VideoItemPreview() {
 @PreviewLightDark
 @Composable
 fun VideoGridItemPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         VideoGridItem(
             video = Video.sample,
             preferences = ApplicationPreferences(),

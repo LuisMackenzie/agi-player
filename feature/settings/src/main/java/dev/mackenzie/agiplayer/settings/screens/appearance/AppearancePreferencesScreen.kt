@@ -30,7 +30,7 @@ import dev.mackenzie.agiplayer.core.ui.components.PreferenceSwitch
 import dev.mackenzie.agiplayer.core.ui.components.PreferenceSwitchWithDivider
 import dev.mackenzie.agiplayer.core.ui.components.RadioTextButton
 import dev.mackenzie.agiplayer.core.ui.designsystem.NextIcons
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 import dev.mackenzie.agiplayer.core.ui.theme.supportsDynamicTheming
 import dev.mackenzie.agiplayer.settings.composables.OptionsDialog
 import dev.mackenzie.agiplayer.settings.extensions.name
@@ -140,7 +140,7 @@ private fun AppearancePreferencesContent(
 @PreviewLightDark
 @Composable
 private fun AppearancePreferencesScreenPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         AppearancePreferencesContent(
             uiState = AppearancePreferencesUiState(),
             onEvent = {},

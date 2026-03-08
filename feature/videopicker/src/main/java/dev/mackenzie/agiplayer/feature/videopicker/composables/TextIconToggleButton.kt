@@ -20,7 +20,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 
 @Composable
 fun TextIconToggleButton(
@@ -62,7 +62,7 @@ fun TextIconToggleButton(
 @Preview
 @Composable
 fun TextIconToggleButtonPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         Surface {
             TextIconToggleButton(
                 text = "Text",

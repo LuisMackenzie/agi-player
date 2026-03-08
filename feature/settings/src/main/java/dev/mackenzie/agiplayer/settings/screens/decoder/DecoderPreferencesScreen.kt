@@ -29,7 +29,7 @@ import dev.mackenzie.agiplayer.core.ui.components.ListSectionTitle
 import dev.mackenzie.agiplayer.core.ui.components.NextTopAppBar
 import dev.mackenzie.agiplayer.core.ui.components.RadioTextButton
 import dev.mackenzie.agiplayer.core.ui.designsystem.NextIcons
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 import dev.mackenzie.agiplayer.settings.composables.OptionsDialog
 import dev.mackenzie.agiplayer.settings.extensions.name
 
@@ -121,7 +121,7 @@ private fun DecoderPreferencesContent(
 @PreviewLightDark
 @Composable
 private fun DecoderPreferencesScreenPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         DecoderPreferencesContent(
             uiState = DecoderPreferencesUiState(),
             onEvent = {},

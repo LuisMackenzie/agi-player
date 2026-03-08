@@ -34,7 +34,7 @@ import androidx.media3.session.SessionToken
 import com.google.common.util.concurrent.ListenableFuture
 import dagger.hilt.android.AndroidEntryPoint
 import dev.mackenzie.agiplayer.core.common.extensions.getMediaContentUri
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 import dev.mackenzie.agiplayer.feature.player.extensions.registerForSuspendActivityResult
 import dev.mackenzie.agiplayer.feature.player.extensions.setExtras
 import dev.mackenzie.agiplayer.feature.player.extensions.uriToSubtitleConfiguration
@@ -100,11 +100,11 @@ class PlayerActivity : ComponentActivity() {
             }
 
             CompositionLocalProvider(LocalUseMaterialYouControls provides (uiState.playerPreferences?.useMaterialYouControls == true)) {
-                NextPlayerTheme(darkTheme = true) {
+                AGIPlayerTheme(darkTheme = true) {
                     MediaPlayerScreen(
                         player = player,
                         viewModel = viewModel,
-                        playerPreferences = uiState.playerPreferences ?: return@NextPlayerTheme,
+                        playerPreferences = uiState.playerPreferences ?: return@AGIPlayerTheme,
                         onSelectSubtitleClick = {
                             lifecycleScope.launch {
                                 val uri = subtitleFileSuspendLauncher.launch(

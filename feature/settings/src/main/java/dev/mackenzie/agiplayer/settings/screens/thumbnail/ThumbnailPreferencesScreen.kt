@@ -41,7 +41,7 @@ import dev.mackenzie.agiplayer.core.ui.components.NextTopAppBar
 import dev.mackenzie.agiplayer.core.ui.components.PreferenceSlider
 import dev.mackenzie.agiplayer.core.ui.components.SingleSelectablePreference
 import dev.mackenzie.agiplayer.core.ui.designsystem.NextIcons
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 import kotlin.math.abs
 
 @Composable
@@ -223,7 +223,7 @@ private sealed interface ThumbnailPreferenceChange {
 @PreviewLightDark
 @Composable
 private fun ThumbnailPreferencesScreenPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         ThumbnailPreferencesContent(
             uiState = ThumbnailPreferencesUiState(),
             onNavigateUp = {},

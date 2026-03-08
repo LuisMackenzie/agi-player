@@ -36,7 +36,7 @@ import dev.mackenzie.agiplayer.core.model.Folder
 import dev.mackenzie.agiplayer.core.model.MediaLayoutMode
 import dev.mackenzie.agiplayer.core.ui.R
 import dev.mackenzie.agiplayer.core.ui.components.NextSegmentedListItem
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 
 @Composable
 fun FolderItem(
@@ -298,7 +298,7 @@ private fun FolderGridItem(
 @PreviewLightDark
 @Composable
 fun FolderItemRecentlyPlayedPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         FolderListItem(
             folder = Folder.sample,
             preferences = ApplicationPreferences(),
@@ -310,7 +310,7 @@ fun FolderItemRecentlyPlayedPreview() {
 @PreviewLightDark
 @Composable
 fun FolderItemPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         FolderListItem(
             folder = Folder.sample.copy(folderList = listOf(Folder.sample)),
             preferences = ApplicationPreferences(),
@@ -322,7 +322,7 @@ fun FolderItemPreview() {
 @PreviewLightDark
 @Composable
 fun FolderGridViewPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         FolderGridItem(
             folder = Folder.sample.copy(folderList = listOf(Folder.sample)),
             preferences = ApplicationPreferences(),

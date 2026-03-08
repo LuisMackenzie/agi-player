@@ -30,7 +30,7 @@ import dev.mackenzie.agiplayer.core.ui.components.NextTopAppBar
 import dev.mackenzie.agiplayer.core.ui.components.PreferenceSwitch
 import dev.mackenzie.agiplayer.core.ui.components.RadioTextButton
 import dev.mackenzie.agiplayer.core.ui.designsystem.NextIcons
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 import dev.mackenzie.agiplayer.settings.composables.OptionsDialog
 import dev.mackenzie.agiplayer.settings.utils.LocalesHelper
 
@@ -151,7 +151,7 @@ private fun AudioPreferencesContent(
 @PreviewLightDark
 @Composable
 private fun AudioPreferencesScreenPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         AudioPreferencesContent(
             uiState = AudioPreferencesUiState(),
             onNavigateUp = {},

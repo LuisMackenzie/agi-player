@@ -43,7 +43,7 @@ import dev.mackenzie.agiplayer.core.ui.components.PreferenceSwitchWithDivider
 import dev.mackenzie.agiplayer.core.ui.components.RadioTextButton
 import dev.mackenzie.agiplayer.core.ui.designsystem.NextIcons
 import dev.mackenzie.agiplayer.core.ui.preview.DayNightPreview
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 import dev.mackenzie.agiplayer.settings.composables.OptionsDialog
 import dev.mackenzie.agiplayer.settings.extensions.name
 
@@ -285,7 +285,7 @@ private fun GesturePreferencesContent(
 @DayNightPreview
 @Composable
 private fun GesturePreferencesScreenPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         GesturePreferencesContent(
             uiState = GesturePreferencesUiState(),
             onEvent = {},

@@ -13,7 +13,7 @@ import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 
 @HiltAndroidApp
-class NextPlayerApplication : Application(), SingletonImageLoader.Factory {
+class AGIPlayerApplication : Application(), SingletonImageLoader.Factory {
 
     @Inject
     lateinit var preferencesRepository: PreferencesRepository

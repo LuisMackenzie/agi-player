@@ -31,7 +31,7 @@ import dev.mackenzie.agiplayer.core.ui.components.NextTopAppBar
 import dev.mackenzie.agiplayer.core.ui.components.SelectablePreference
 import dev.mackenzie.agiplayer.core.ui.designsystem.NextIcons
 import dev.mackenzie.agiplayer.core.ui.extensions.plus
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 
 @Composable
 fun FolderPreferencesScreen(
@@ -108,7 +108,7 @@ private fun FolderPreferencesContent(
 @PreviewLightDark
 @Composable
 private fun FolderPreferencesScreenPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         FolderPreferencesContent(
             uiState = FolderPreferencesUiState(),
             onNavigateUp = {},

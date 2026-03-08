@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import dev.mackenzie.agiplayer.core.ui.R
 import dev.mackenzie.agiplayer.core.ui.preview.DayNightPreview
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 
 @Composable
 fun PermissionRationaleDialog(
@@ -40,7 +40,7 @@ fun PermissionRationaleDialog(
 @DayNightPreview
 @Composable
 fun PermissionRationaleDialogPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         Surface {
             PermissionRationaleDialog(
                 text = stringResource(

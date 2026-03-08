@@ -24,7 +24,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import dev.mackenzie.agiplayer.core.ui.R
 import dev.mackenzie.agiplayer.core.ui.preview.DayNightPreview
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 
 @Composable
 fun PermissionDetailView(
@@ -67,7 +67,7 @@ fun PermissionDetailView(
 @DayNightPreview
 @Composable
 fun PermissionDetailViewPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         Surface {
             PermissionDetailView(
                 text = stringResource(

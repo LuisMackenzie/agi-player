@@ -67,7 +67,7 @@ import dev.mackenzie.agiplayer.core.ui.components.NextTopAppBar
 import dev.mackenzie.agiplayer.core.ui.designsystem.NextIcons
 import dev.mackenzie.agiplayer.core.ui.extensions.copy
 import dev.mackenzie.agiplayer.core.ui.extensions.plus
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 import dev.mackenzie.agiplayer.feature.videopicker.composables.FolderItem
 import dev.mackenzie.agiplayer.feature.videopicker.composables.MediaView
 
@@ -423,7 +423,7 @@ private fun SearchResultsContent(
 @PreviewLightDark
 @Composable
 private fun SearchScreenEmptyPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         SearchScreen(
             uiState = SearchUiState(),
         )
@@ -433,7 +433,7 @@ private fun SearchScreenEmptyPreview() {
 @PreviewLightDark
 @Composable
 private fun SearchScreenWithHistoryPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         SearchScreen(
             uiState = SearchUiState(
                 searchHistory = listOf("avengers", "movie", "trailer"),
@@ -459,7 +459,7 @@ private fun SearchScreenWithHistoryPreview() {
 @PreviewLightDark
 @Composable
 private fun SearchScreenWithResultsPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         SearchScreen(
             uiState = SearchUiState(
                 query = "movie",
@@ -484,7 +484,7 @@ private fun SearchScreenWithResultsPreview() {
 @PreviewLightDark
 @Composable
 private fun SearchScreenNoResultsPreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         SearchScreen(
             uiState = SearchUiState(
                 query = "xyz123",

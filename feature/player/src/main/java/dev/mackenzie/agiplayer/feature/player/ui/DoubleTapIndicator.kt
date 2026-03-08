@@ -35,7 +35,7 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import dev.mackenzie.agiplayer.core.model.DoubleTapGesture
 import dev.mackenzie.agiplayer.core.ui.R
-import dev.mackenzie.agiplayer.core.ui.theme.NextPlayerTheme
+import dev.mackenzie.agiplayer.core.ui.theme.AGIPlayerTheme
 import dev.mackenzie.agiplayer.feature.player.state.TapGestureState
 import kotlin.time.Duration.Companion.milliseconds
 
@@ -172,7 +172,7 @@ private fun DoubleTapArrow(alpha: Float) {
 @Preview
 @Composable
 private fun OvalShapePreview() {
-    NextPlayerTheme {
+    AGIPlayerTheme {
         Row(modifier = Modifier.fillMaxWidth()) {
             Box(
                 modifier = Modifier
