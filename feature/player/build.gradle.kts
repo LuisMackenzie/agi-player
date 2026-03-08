@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "dev.anilbeesetti.nextplayer.feature.player"
+    namespace = "dev.mackenzie.agiplayer.feature.player"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {

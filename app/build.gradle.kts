@@ -9,13 +9,13 @@ plugins {
 }
 
 android {
-    namespace = "dev.anilbeesetti.nextplayer"
+    namespace = "dev.mackenzie.agiplayer"
 
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
-        applicationId = "dev.mackenzie.nextplayer"
+        applicationId = "dev.mackenzie.agiplayer"
         versionCode = 51
         versionName = "0.15.4"
     }

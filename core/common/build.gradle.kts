@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "dev.anilbeesetti.nextplayer.core.common"
+    namespace = "dev.mackenzie.agiplayer.core.common"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
