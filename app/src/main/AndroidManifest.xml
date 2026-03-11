@@ -34,6 +34,40 @@
 
         <activity android:name=".crash.CrashActivity" />
 
+        <activity
+            android:name="dev.mackenzie.agiplayer.feature.player.PlayerActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            tools:replace="android:launchMode">
+
+            <!-- Reproducir archivos de video directamente (ACTION_VIEW con URI de fichero/content) -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:mimeType="video/*" />
+            </intent-filter>
+
+            <!-- Reproducir URLs de video vía http/https (ACTION_VIEW con URL) -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:mimeType="video/*" />
+            </intent-filter>
+
+            <!-- Recibir enlace compartido desde otra app (ACTION_SEND con texto que contiene una URL) -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"

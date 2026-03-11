@@ -8,6 +8,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.WindowManager
+import androidx.core.net.toUri
 import androidx.activity.ComponentActivity
 import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
@@ -181,7 +182,7 @@ class PlayerActivity : ComponentActivity() {
     }
 
     private fun startPlayback() {
-        val uri = intent.data ?: return
+        val uri = resolveIntentUri(intent) ?: return
 
         val returningFromBackground = !isIntentNew && mediaController?.currentMediaItem != null
         val isNewUriTheCurrentMediaItem = mediaController?.currentMediaItem?.localConfiguration?.uri.toString() == uri.toString()
@@ -196,6 +197,24 @@ class PlayerActivity : ComponentActivity() {
 
         lifecycleScope.launch {
             playVideo(uri)
+        }
+    }
+
+    /**
+     * Resuelve la URI de reproducción a partir del intent recibido.
+     * Soporta tanto [Intent.ACTION_VIEW] (con [Intent.getData]) como
+     * [Intent.ACTION_SEND] (con el texto del extra [Intent.EXTRA_TEXT] que contiene una URL).
+     */
+    private fun resolveIntentUri(intent: Intent): Uri? {
+        return when (intent.action) {
+            Intent.ACTION_SEND -> {
+                val sharedText = intent.getStringExtra(Intent.EXTRA_TEXT) ?: return null
+                // Extrae la primera URL encontrada en el texto compartido
+                val urlRegex = Regex("https?://\\S+")
+                val url = urlRegex.find(sharedText)?.value ?: return null
+                url.toUri()
+            }
+            else -> intent.data
         }
     }
 
@@ -297,7 +316,7 @@ class PlayerActivity : ComponentActivity() {
 
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
-        if (intent.data != null) {
+        if (resolveIntentUri(intent) != null) {
             setIntent(intent)
             isIntentNew = true
             if (mediaController != null) {
