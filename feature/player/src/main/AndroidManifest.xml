@@ -77,7 +77,8 @@
                 <data android:mimeType="application/vnd.rn-realmedia" />
                 <data android:mimeType="application/vnd.rn-realmedia-vbr" />
                 <data android:mimeType="application/mpegurl" />
-                <data android:mimeType="application/x-mpegURL" />
+                <data android:mimeType="application/x-mpegURL"
+                    tools:ignore="AppLinkUrlError" />
                 <data android:mimeType="application/x-matroska" />
             </intent-filter>
 
